@@ -1,0 +1,3 @@
+library(Ritalic)
+
+Ritalic::getLicPoints('Parmelia omphalodes (L.) Ach.')

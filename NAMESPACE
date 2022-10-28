@@ -1,0 +1,7 @@
+exportPattern("^[[:alpha:]]+")
+import(httr)
+import(jsonlite)
+import(dplyr)
+import(sp)
+import(rgdal)
+import(raster)
