@@ -13,6 +13,14 @@ getLicPoints <- function(sp_name){
   return(data)
 }
 
+matchLicName <- function(sp_name){
+  res <- GET('https://italic.units.it/?procedure=matchapi', query = list(sp = sp_name))
+  data = fromJSON(rawToChar(res$content))
+  data = data[2]
+  data = data$match
+  return(data)
+}
+
 dfToSpatialPoints <- function(getLicPointsOutput){
   points <- getLicPointsOutput
   points$lat <- suppressWarnings(as.numeric(points$lat))
